@@ -21,6 +21,7 @@
     2 months ago
   </dd>
 
+  <% if @user_id == @photo.owner_id %>
   <dt>Edit photo</dt>
   <dd>
     <form action="/update_photo/<%= @photo.id %>">
@@ -33,7 +34,7 @@
       <button>Update photo</button>
     </form>
   </dd>
-
+  <% end %>
   <dt>Delete photo</dt>
   <dd>
     <a href="/delete_photo/<%= @photo.id %>;">
